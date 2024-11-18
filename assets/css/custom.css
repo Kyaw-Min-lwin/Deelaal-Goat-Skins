@@ -1,0 +1,25 @@
+/*
+Custom Css
+*/
+
+.logo-container{
+    display: flex;
+}
+
+.carousel-item .container .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leather-things{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

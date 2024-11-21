@@ -6,9 +6,16 @@
 }
 
 body {
-    background: url("/assets/img/background.avif") center center no-repeat !important;
-    background-size: contain !important;
-    /* background-color: rgb(245, 135, 32); */
+    background-image: url('/assets/img/background.avif');
+    background-size: cover !important;
+    /* Ensures it covers the entire screen */
+    background-position: center center !important;
+    /* Center the background */
+    background-attachment: fixed !important;
+    /* Optional, adds parallax effect */
+    /* Ensure the body takes full height of the viewport */
+    margin: 0;
+    /* Optional: Remove margin if necessary to avoid unwanted space */
     color: var(--text-color);
     /* display: flex;
     flex-direction: column;
@@ -155,18 +162,31 @@ nav.navbar {
 }
 
 .leather-things img.rect {
-    width: 1000px;
+    width: 500px;
     height: 200px;
-    object-fit: contain;
     border: none;
+    object-fit: cover !important;
 }
 
-.weird {
+/* .weird {
     object-fit: cover;
-}
+} */
 
 /* General adjustments for mobile */
 @media (max-width: 768px) {
+    body {
+        background-size: cover !important;
+        /* Ensures it covers the entire screen */
+        background-position: center center !important;
+        /* Center the background */
+        background-attachment: fixed !important;
+        /* Optional, adds parallax effect */
+        height: 100vh;
+        /* Ensure the body takes full height of the viewport */
+        margin: 0;
+        /* Optional: Remove margin if necessary to avoid unwanted space */
+    }
+
     nav div .logo-container a.navbar-brand {
         font-size: 2rem !important;
     }
@@ -183,9 +203,24 @@ nav.navbar {
         flex-direction: column;
     }
 
-    .leather-things img {
-        height: 150px;
-        width: 150px;
+    #leather-jacket>a>img, #leather-boots>a>img, #leather-bag>a>img, #leather-gloves>a>img {
+        width: 300px;
+        height: auto;
+        min-height: 100px;
+        text-align: center;
+        object-fit: cover !important;
+        border: none !important;
+    }
+
+    /* .leather-things img {
+        height: 200px;
+        width: 100%;
+    } */
+
+    #leather-jacket {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .leather-things>div {

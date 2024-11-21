@@ -115,6 +115,9 @@ nav.navbar {
     margin-top: 10px;
 }
 
+#product-text {
+    width: 200px;
+}
 
 .leather-things div {
     display: flex;

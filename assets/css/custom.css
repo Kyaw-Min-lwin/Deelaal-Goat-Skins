@@ -42,6 +42,16 @@ nav.navbar {
     color: #4CAF50;
 }
 
+.carousel-item .container .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#third {
+    height: 300px;
+}
+
 .carousel-item p {
     font-size: 1.1rem;
     color: #333;
